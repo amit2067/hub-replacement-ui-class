@@ -1,0 +1,130 @@
+<div id="MainContainer" ng-controller="classController"
+			style="padding-top: 3%; padding-bottom: 3%;">
+			
+			<div id="blankField" class="body-text"
+				style="padding-bottom: 2%; color: red;" ng-show="isFieldsEmpty">Please
+				provide all mandatory fields.</div>
+
+			<div id="header-text" class="header-text">CLASS - Add a new Customer</div>
+
+            <form name="addCustomerForm" ng-submit="createCustomer()" novalidate> 
+			<div id="FirstNameSection" style="padding-top: 30px;">
+				<div id="FirstNameTxt" class="body-text left width200">First
+					Name<span style="color:red;">*</span></div>
+				<div id="FirstNameTxtFieldSection" class="left"
+					style="padding-left: 50px;">
+					<input type="text" ng-class="{ errorinput: isFieldsEmpty && addCustomerForm.firstName.$invalid }"
+					    id="FirstNameTxtField" name="firstName"
+						ng-model="firstName" placeholder="First Name" required/>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div id="LastNameSection" style="padding-top: 30px;">
+				<div id="LastNameSectionTxt" class="body-text left width200">Last
+					Name<span style="color:red;">*</span></div>
+				<div id="LastNameSectionTxtFieldSection" class="left"
+					style="padding-left: 50px;">
+					<input type="text" ng-class="{ errorinput: isFieldsEmpty && addCustomerForm.lastName.$invalid }" 
+					 id="LastNameSectionTxtField" name="lastName"
+						ng-model="lastName" placeholder="Last Name" required />
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div id="EmailAddressSection" style="padding-top: 30px;">
+				<div id="EmailAddressSectionTxt" class="body-text left width200">Email
+					Address<span style="color:red;">*</span></div>
+				<div id="EmailAddressSectionTxtFieldSection" class="left"
+					style="padding-left: 50px;">
+					<input type="text" ng-class="{ errorinput: isFieldsEmpty && addCustomerForm.emailAddress.$invalid}" 
+					      id="EmailAddressSectionTxtField"
+						name="emailAddress" ng-model="emailAddress" placeholder="Email Address" required/>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+			<div id="AddressLine1Section" style="padding-top: 30px;">
+				<div id="AddressLine1SectionTxt" class="body-text left width200">Address Line 1<span style="color:red;">*</span></div>
+				<div id="AddressLine1SectionTxtFieldSection" class="left"
+					style="padding-left: 50px;">
+					<input type="text" ng-class="{ errorinput: isFieldsEmpty && addCustomerForm.addressLine1.$invalid}" 
+					      id="AddressLine1SectionTxtField"
+						name="addressLine1" ng-model="addressLine1" placeholder="Address Line 1" required/>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+			<div id="AddressLine2Section" style="padding-top: 30px;">
+				<div id="AddressLine2SectionTxt" class="body-text left width200">Address Line 2</div>
+				<div id="AddressLine2SectionTxtFieldSection" class="left"
+					style="padding-left: 50px;">
+					<input type="text" id="AddressLine2SectionTxtField"
+						name="addressLine2" ng-model="addressLine2" placeholder="Address Line 2" required/>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+			<div id="CitySection" style="padding-top: 30px;">
+				<div id="CitySectionTxt" class="body-text left width200">City<span style="color:red;">*</span></div>
+				<div id="CitySectionTxtFieldSection" class="left"
+					style="padding-left: 50px;">
+					<input type="text" ng-class="{ errorinput: isFieldsEmpty && addCustomerForm.city.$invalid}" 
+					      id="CitySectionTxtField"
+						name="city" ng-model="city" placeholder="City" required/>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+			<div id="PostalCodeSection" style="padding-top: 30px;">
+				<div id="PostalCodeSectionTxt" class="body-text left width200">Postal Code<span style="color:red;">*</span></div>
+				<div id="PostalCodeSectionTxtFieldSection" class="left"
+					style="padding-left: 50px;">
+					<input type="text" ng-class="{ errorinput: isFieldsEmpty && addCustomerForm.postalCode.$invalid}" 
+					      id="PostalCodeSectionTxtField"
+						name="postalCode" ng-model="postalCode" placeholder="Postal Code" required/>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+			<div id="PhoneNumberSection" style="padding-top: 30px;">
+				<div id="PhoneNumberSectionTxt" class="body-text left width200">Phone Number</div>
+				<div id="PhoneNumberSectionTxtFieldSection" class="left"
+					style="padding-left: 50px;">
+					<input type="text" id="PostalCodeSectionTxtField"
+						name="phoneNumber" ng-model="phoneNumber" placeholder="Phone Number" required/>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div id="ButtonSection"
+				style="padding-top: 30px; padding-left: 50px;">
+				<div id="CreateCustomerButtonSection" class="left">
+					<input type="submit" value="Create Customer"
+						class="btn btn-success custom-width" />
+				</div>
+				<div id="ResetButtonSection" class="left"
+					style="padding-left: 50px;" ng-click="resetCustomer()">
+					<input type="button" value="Reset" class="btn btn-primary btn-sm" />
+				</div>
+				<div class="clear"></div>
+			</div>
+			</form>
+			<div id="ProcessingOverlay" style="display: none;">
+				<div class="processingoverlay"></div>
+			</div>
+			<div id="CustomerCreatedOverlay" style="display: none;">
+				<div class="customerCreatedOverlay">
+				    <div>Customer has been created successfully with id {{customerId}}.</div>
+				      <div id="OverlayButtonSection" style="padding-top: 30px; padding-left: 50px;">
+				      <div id="OkButtonSection" class="left" style="padding-left: 50px;" ng-click="ok()">
+					       <input type="button" value="OK" class="btn btn-primary btn-sm" />
+				     </div>
+				       <div class="clear"></div>
+			        </div>
+			   </div>
+				
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>

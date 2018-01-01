@@ -1,0 +1,130 @@
+.header-text {
+	font-size: 1.5em;
+	border-bottom: 1px solid palevioletred;
+	padding-bottom: 1%;
+}
+
+.body-text {
+	font-size: 1.2em;
+}
+
+.left {
+	float: left;
+}
+
+.clear {
+	clear: both;;
+}
+
+.width200 {
+	width: 200px;
+}
+
+.processingoverlay {
+	background-image: url('/images/animation_processing.gif');
+	width: 200px;
+	height: 200px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-shadow: 0 0 30px black;
+}
+
+select {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-appearance: none;
+	appearance: none;
+	border: 1px solid #5cb85c;
+	font-weight: bold;
+	outline: 0;
+	color: #585858;
+	border-color: #5cb85c;
+	padding: 0.45em 2.0em 0.55em 0.65em;
+	border-radius: 3px;
+	background-color: white;
+	background: linear-gradient(#5cb85c, #5cb85c) no-repeat,
+		linear-gradient(-135deg, rgba(255, 255, 255, 0) 50%, white 50%)
+		no-repeat, linear-gradient(-225deg, rgba(255, 255, 255, 0) 50%, white
+		50%) no-repeat, linear-gradient(#5cb85c, #5cb85c) no-repeat;
+	background-size: 1px 100%, 20px 20px, 20px 20px, 20px 60%;
+	background-position: right 20px center, right bottom, right bottom,
+		right bottom;
+}
+
+.leftnavBar {
+	padding: 15;
+	border-radius: 2px;
+	box-shadow: 0 0 10px black;
+}
+
+.backGroundDarkGray {
+	background-color: darkgray;
+}
+
+.pointer {
+	cursor: pointer;
+}
+th {
+	font: bold 15px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #6D929B;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 12px;
+	background: #CAE8EA no-repeat;
+}
+
+th.nobg {
+	border-top: 0;
+	border-left: 0;
+	border-right: 1px solid #C1DAD7;
+	background: none;
+}
+
+th.spec {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	background: #fff no-repeat;
+	font: bold 13px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+th.specalt {
+	border-left: 1px solid #C1DAD7;
+	border-top: 0;
+	background: #f5fafa no-repeat;
+	font: bold 13px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #B4AA9D;
+}
+
+td {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	padding: 6px 6px 6px 12px;
+	color: #6D929B;
+}
+
+td.alt {
+	background: #F5FAFA;
+	color: #B4AA9D;
+}
+.errorinput {
+color: #850000;
+background: rgba(254, 186, 186, 0.5);
+border: 1px solid #850000;
+}
+
+.customerCreatedOverlay {
+	width: 500px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 30px black;
+    font-family: Arial;
+    font-size: 1.2em;
+    padding-left: 50px;
+    padding-top: 40px;
+    background-color: darkgray;
+}
