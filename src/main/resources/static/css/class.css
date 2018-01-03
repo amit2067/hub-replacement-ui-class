@@ -117,8 +117,8 @@ border: 1px solid #850000;
 }
 
 .customerCreatedOverlay {
-	width: 500px;
-    height: 200px;
+	width: 400px;
+    height: 170px;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-shadow: 0 0 30px black;
@@ -126,7 +126,7 @@ border: 1px solid #850000;
     font-size: 1.2em;
     padding-left: 50px;
     padding-top: 40px;
-    background-color: darkgray;
+    background-color: snow;
 }
 .mainContainer {
 	padding-top: 3%;
