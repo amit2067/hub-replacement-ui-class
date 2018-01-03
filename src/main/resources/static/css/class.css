@@ -128,3 +128,9 @@ border: 1px solid #850000;
     padding-top: 40px;
     background-color: darkgray;
 }
+.mainContainer {
+	padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: beige;
+    padding-left: 10%;
+}
