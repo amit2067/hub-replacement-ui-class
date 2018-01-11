@@ -32,7 +32,7 @@ public class ClassSwaggerConfig {
                 "CLASS MicroServices",
                 "1.0",
                 "Terms of service",
-                new Contact("Amit Batra", "", "amit2067@gmail.com"),
+                new Contact("A Developer", "", "email@gmail.com"),
                "Apache License Version 2.0",
                 "https://www.apache.org/licenses/LICENSE-2.0");
         return apiInfo;
