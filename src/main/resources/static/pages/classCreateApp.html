@@ -1,0 +1,112 @@
+<div id="MainContainer" ng-controller="classController"
+	class="mainContainer">
+
+	<div id="blankField" class="body-text"
+		style="padding-bottom: 2%; color: red;" ng-show="isAppFieldsEmpty">Please
+		provide all mandatory fields.</div>
+
+	<div id="header-text" class="header-text">LA Portal - Create an
+		Application</div>
+
+	<form name="createApplicationForm" ng-submit="createApplication()"
+		novalidate>
+		<div id="HEINameSection" style="padding-top: 30px;">
+			<div id="HEINameTxt" class="body-text left width200">
+				University Name<span style="color: red;">*</span>
+			</div>
+			<div id="HEINameTxtFieldSection" class="left"
+				style="padding-left: 50px;">
+				<select ng-model="selectedHEI">
+				    <option value="Select">Select</option>
+					<option ng-repeat="x in heis" value="{{x.code}}">{{x.name}}</option>
+				</select>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="CourseNameSection" style="padding-top: 30px;">
+			<div id="CourseNameSectionTxt" class="body-text left width200">
+				Course Name<span style="color: red;">*</span>
+			</div>
+			<div id="CourseNameSectionTxtFieldSection" class="left"
+				style="padding-left: 50px;">
+				<select ng-model="selectedCourse">
+				    <option value="Select">Select</option>
+					<option ng-repeat="x in courses" value="{{x.code}}">{{x.name}}</option>
+				</select>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="CourseYearSection" style="padding-top: 30px;">
+			<div id="CourseYearSectionTxt" class="body-text left width200">
+				Course Year<span style="color: red;">*</span>
+			</div>
+			<div id="CourseYearSectionTxtFieldSection" class="left"
+				style="padding-left: 50px;">
+				<select ng-model="selectedCourseYear">
+				    <option value="Select">Select</option>
+					<option ng-repeat="x in courseYears" value="{{x.code}}">{{x.name}}</option>
+				</select>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="TFLAmountSection" style="padding-top: 30px;">
+			<div id="TFLAmountSectionTxt" class="body-text left width200">
+				Tuition Fee Loan Amount (In &#163;)<span style="color: red;">*</span>
+			</div>
+			<div id="TFLAmountSectionTxtFieldSection" class="left"
+				style="padding-left: 50px;">
+				<input type="text"
+					ng-class="{ errorinput: isAppFieldsEmpty && createApplicationForm.tflAmount.$invalid}"
+					id="TFLAmountSectionTxtField" name="tflAmount" ng-model="tflAmount"
+					placeholder="Tuition Fee Loan Amount" required />
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="MLAmountSection" style="padding-top: 30px;">
+			<div id="MLAmountSectionTxt" class="body-text left width200">
+				Maintenance Loan Amount (In &#163;)<span style="color: red;">*</span>
+			</div>
+			<div id="MLAmountSectionTxtFieldSection" class="left"
+				style="padding-left: 50px;">
+				<input type="text"
+					ng-class="{ errorinput: isAppFieldsEmpty && createApplicationForm.mlAmount.$invalid}"
+					id="MLAmountSectionTxtField" name="mlAmount" ng-model="mlAmount"
+					placeholder="Maintenance Loan Amount" required />
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div id="ButtonSection" style="padding-top: 30px; padding-left: 50px;">
+			<div id="CreateAppButtonSection" class="left">
+				<input type="submit" value="Create application"
+					class="btn btn-success custom-width" />
+			</div>
+			<div id="ResetButtonSection" class="left" style="padding-left: 50px;" ng-click="resetApplication()">
+				<input type="button" value="Reset" class="btn btn-primary btn-sm" />
+			</div>
+			<div class="clear"></div>
+		</div>
+	</form>
+	<div id="ProcessingOverlay" style="display: none;">
+		<div class="processingoverlay"></div>
+	</div>
+	<div id="ApplicationCreatedOverlay" style="display: none;">
+		<div class="customerCreatedOverlay">
+			<div>Application has been created - ID {{applicationId}}</div>
+			<div id="appOverlayButtonSection" style="padding-top: 30px; padding-left: 80px;">
+				 <div id="OkButtonSection" class="left" ng-click="ok()">
+				   <input type="button" value="OK"
+						class="btn btn-success custom-width" />
+				    </div>
+				 <div class="clear"></div>
+			 </div>
+		</div>
+
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
