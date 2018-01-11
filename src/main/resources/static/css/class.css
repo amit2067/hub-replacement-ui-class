@@ -117,8 +117,8 @@ border: 1px solid #850000;
 }
 
 .customerCreatedOverlay {
-	width: 400px;
-    height: 170px;
+	width: 500px;
+    height: 210px;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-shadow: 0 0 30px black;
@@ -133,4 +133,11 @@ border: 1px solid #850000;
     padding-bottom: 3%;
     background-color: beige;
     padding-left: 10%;
+}
+
+.headerText {
+	padding-left: 40%;
+	padding-top: 5%;
+	font-size: 2em;
+	font-family: inherit;
 }
