@@ -115,9 +115,14 @@
 			<div id="CustomerCreatedOverlay" style="display: none;">
 				<div class="customerCreatedOverlay">
 				    <div>Customer has been created - ID {{customerId}}.</div>
+				    <div>Do you want to create a loan application?</div>
 				      <div id="OverlayButtonSection" style="padding-top: 30px; padding-left: 50px;">
-				      <div id="OkButtonSection" class="left" style="padding-left: 50px;" ng-click="ok()">
-					       <input type="button" value="OK" class="btn btn-primary btn-sm" />
+				        <div id="YesButtonSection" class="left" ng-click="yes()">
+					      <input type="button" value="Yes"
+						class="btn btn-success custom-width" />
+				       </div>
+				      <div id="NoButtonSection" class="left" style="padding-left: 50px;" ng-click="no()">
+					       <input type="button" value="No" class="btn btn-primary btn-sm" />
 				     </div>
 				       <div class="clear"></div>
 			        </div>
