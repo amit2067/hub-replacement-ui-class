@@ -19,7 +19,7 @@ classApp.factory('classService', [
 		function($http, $q) {
 			return {
 				createCustomer : function(customer) {
-					return $http.post('http://localhost:9083/createCustomer',
+					return $http.post('/createCustomer',
 							customer).then(function(response) {
 						return response.data;
 					}, function(errResponse) {
@@ -28,7 +28,7 @@ classApp.factory('classService', [
 					});
 				},
 				createApplication : function(application) {
-					return $http.post('http://localhost:9083/createApplication',
+					return $http.post('/createApplication',
 							application).then(function(response) {
 						return response.data;
 					}, function(errResponse) {
@@ -141,7 +141,7 @@ classApp.controller('classController', [
 			
 			$scope.no = function() {
 				showOverLay('CustomerCreatedOverlay',false, 6000);
-				location.href = "http://localhost:9083/pages/classHome.html";
+				location.href = "/pages/classHome.html";
 			}
 
 			$scope.resetCustomer = function() {
@@ -157,7 +157,7 @@ classApp.controller('classController', [
 
 			$scope.ok = function() {
 				showOverLay('ApplicationCreatedOverlay', false, 6000);
-				location.href = "http://localhost:9083/pages/classHome.html";
+				location.href = "/pages/classHome.html";
 			}
 			
 			$scope.createApplication = function () {
